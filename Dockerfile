@@ -4,7 +4,6 @@ WORKDIR /bot
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt -qq update && apt -qq install -y git wget pv jq python3-dev ffmpeg mediainfo
 RUN apt-get install neofetch wget -y -f
-RUN apt-get install libsvtav1 -y
 
 COPY . .
 RUN pip3 install -r requirements.txt
